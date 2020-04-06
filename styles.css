@@ -1,0 +1,58 @@
+body {
+    font-size: 30px;
+    background: linear-gradient(to right, rgb(50, 117, 192), rgb(158, 199, 218));
+}
+
+button {
+    color: #f8f9fa;
+    border: 0px;
+}
+
+button:focus {
+    outline: 0;
+}
+
+.outputWindow, .workingWindow {
+    border-bottom: 0px;
+    background-color: rgb(69, 90, 100, .95);
+    text-align: right;
+} 
+
+.outputWindow {
+    line-height: 66px;
+}
+
+.workingWindow {
+    line-height: 34px;
+    height: 34px;
+    font-size: 20px;
+}
+
+.buttonsBody {
+    width: 100%;
+    height: 80%;
+    border-top: 0px;
+}
+
+.numColumn, .operatorColumn {
+    display: inline-block;
+    width: 25%;
+    height: 100%;
+}
+
+.numButton, .operatorButton {
+    line-height: 100px;
+    background-color: rgb(33, 33, 33, .95);
+}
+
+.operatorButton {
+    border-left: 1px solid rgb(128, 131, 131);
+    overflow: hidden;
+    color: rgb(21, 101, 192);
+}
+
+#btnDelete, #btnCE, #btnAC {
+    border-left: 0px;   
+    border-bottom: 1px solid rgb(128, 131, 131);
+    line-height: 50px;
+}
