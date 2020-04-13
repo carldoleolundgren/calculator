@@ -1,6 +1,7 @@
 const outputWindow = document.querySelector('.outputWindow');
 const workingWindow = document.querySelector('.workingWindow')
 let operator = '';
+let equalsPressed = false;
 
 function clickCE() {
     outputWindow.textContent = 0;
@@ -51,6 +52,7 @@ function calculate() {
 
     workingWindow.innerText = '';
     outputWindow.innerText = Number(computation.toFixed(10));
+    equalsPressed = true;
 }
 
 function operate() {
@@ -89,6 +91,8 @@ document.addEventListener('click', event => {
     let target = event.target;
 
     function clickNumBtn() {
+        if (equalsPressed) outputWindow.innerText = '';
+        equalsPressed = false;
         outputWindow.innerText += target.innerText;
         outputWindow.innerText = Number(outputWindow.innerText);
     }
